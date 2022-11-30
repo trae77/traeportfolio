@@ -16,12 +16,13 @@ import mysql from "./picture/icons/mysql.png";
 import node from "./picture/icons/node.png";
 import react from "./picture/icons/react.png";
 import sass from "./picture/icons/sass.png"; 
+import background from './picture/background.jpg';
 // import card from "./Projects.json";
 
 function App() {
   return (
    
-    <div  style={{ backgroundImage: `url(${react})`,backgroundSize: 'cover' }} className="App">
+    <div  style={{ backgroundImage: `url(${background})`,backgroundSize: 'cover' }} className="App">
     
    
 <div class="row">

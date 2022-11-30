@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // components takes precedence over default styles.
 import './App.css';
 
+
 import github from './picture/icons/github.png';
 import css from './picture/icons/css.png';
 import html from './picture/icons/html.png';
@@ -19,8 +20,10 @@ import sass from "./picture/icons/sass.png";
 
 function App() {
   return (
-    <container-fluid  className="App">
-      <div className="background">
+   
+    <div  style={{ backgroundImage: `url(${react})`,backgroundSize: 'cover' }} className="App">
+    
+   
 <div class="row">
   <div class="col-sm-3"> 
   <div className="custom-btn">
@@ -58,7 +61,7 @@ function App() {
               maximum potential, with the opportunity for advancement based on
               performance.
             </h3>
-        
+   
             <div className="card-container">
               <div className="card">
                 <div className="card-image">
@@ -72,6 +75,7 @@ function App() {
                     uses JSON-like documents with optional schemas.
                   </p>
                   </div>
+
                   </div>
                   </div>
 
@@ -98,9 +102,9 @@ function App() {
             </div>
   </div>
 </div>
-      </div>
-      <script src="./flipcard.js"></script>
-    </container-fluid>  
+
+
+    </div>  
 
   );
 

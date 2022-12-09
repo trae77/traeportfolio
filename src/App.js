@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import './App.css';
-
+import ReactCardFlip from 'react-card-flip';
 
 import github from './picture/icons/github.png';
 import css from './picture/icons/css.png';
@@ -19,7 +19,24 @@ import sass from "./picture/icons/sass.png";
 import background from './picture/background.jpg';
 // import card from "./Projects.json";
 
+
+
+
+import React, { useState } from 'react';
+
+
+
+
+
+
+
 function App() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  function handleClick(e) {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
+  }
   return (
    
     <div  style={{ backgroundImage: `url(${background})`,backgroundSize: 'cover' }} className="App">
@@ -62,27 +79,27 @@ function App() {
               maximum potential, with the opportunity for advancement based on
               performance.
             </h3>
-   
-            <div className="card-container">
-              <div className="card">
-                <div className="card-image">
-                  <img src={mongodb} alt="mongodb" />
-                  </div>
-                <div className="card-content">
-                  <h2 className="card-title">MongoDB</h2>
-                  <p className="card-text">
-                    MongoDB is a cross-platform document-oriented database
-                    program. Classified as a NoSQL database program, MongoDB
-                    uses JSON-like documents with optional schemas.
-                  </p>
-                  </div>
 
-                  </div>
-                  </div>
 
-           
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+              <div style = {{backgroundColor: "white"}}>
+                This is the front of the card.
+                <button onClick={handleClick}>Click to flip</button>
+              </div>
 
-            </div>
+              <div style = {{backgroundColor: "white"}}>
+                This is the back of the card.
+                <button onClick={handleClick}>Click to flip</button>
+              </div>
+            </ReactCardFlip>
+
+
+ 
+ 
+
+          
+
+     </div>
   <div class="col-sm-3">
   <div className="custom-btn">
               <button class="button">

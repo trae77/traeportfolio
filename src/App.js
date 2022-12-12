@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import "./App.css";
-// import ReactCardFlip from 'react-card-flip';
+import ReactCardFlip from "react-card-flip";
 
 import github from "./pictures/icons/github.png";
 import css from "./pictures/icons/css.png";
@@ -18,17 +18,12 @@ import react from "./pictures/icons/react.png";
 import sass from "./pictures/icons/sass.png";
 import background from "./pictures/background.jpg";
 import card from "./Projects.json";
-
 import React, { useState } from "react";
 
-function App() {
-  const [isFlipped, setIsFlipped] = useState(false);
 
-  function handleClick(e) {
-    e.preventDefault();
-    console.log("clicked");
-    setIsFlipped(!isFlipped);
-  }
+function App() {
+  const [flip, setFlip] = useState(false);
+
   return (
     <div
       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
@@ -74,28 +69,47 @@ function App() {
           </h3>
 
           {card.map(($Card) => (
-            <div
-              className="card-container"
+            <ReactCardFlip
+              isFlipped={flip}
+              flipDirection="vertical"
               key={card.id}
-              style={{
-                backgroundcolor: "white",
-              }}
             >
-              <div className="card"  style={{ backgroundImage: `url(${card.image})`, backgroundSize: "cover" }} >
-              <div className="card-body">
+              <div
+                className="card-body"
+                style={{
+                  width: "18rem",
+                  height: "18rem",
+                  backgroundColor: "white",
+                  margin: "10px",
+                  borderRadius: "10px",
+                  border: "1px solid black",
+                }}>
+              
                 <h5>{$Card.name}</h5>
                 <p>{$Card.description}</p>
-                <button onClick={handleClick}>Click to flip</button>
+                <button onClick={() => setFlip(!flip)}>Flip</button>
               </div>
-
-              <div className="card-back">
-                <h5>lol</h5>
-                <p>{$Card.tools}</p>
-                <button onClick={handleClick}>Click to flip</button>
-                <button href={$Card.deployed}></button>
+              <div>
+                <div
+                  className="card-back"
+                  style={{
+                    width: "18rem",
+                    height: "18rem",
+                    backgroundColor: "white",
+                    margin: "10px",
+                    borderRadius: "10px",
+                    border: "1px solid black",
+                    backgroundImage: `url(${$Card.image})`,
+                  }}
+                >
+                  <h5>lol</h5>
+                  <p>{$Card.tools}</p>
+                  <button onClick={() => setFlip(!flip)}>Flip</button>
+                  <button> <a href={$Card.deployed}> deployed </a>
+                  </button>
+                </div>
               </div>
-            </div>
-            </div>
+            </ReactCardFlip>
           ))}
         </div>
 

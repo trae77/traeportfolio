@@ -26,6 +26,7 @@ function App() {
 
   function handleClick(e) {
     e.preventDefault();
+    console.log("clicked");
     setIsFlipped(!isFlipped);
   }
   return (
@@ -75,25 +76,29 @@ function App() {
           {card.map(($Card) => (
             <div
               className="card-container"
-              id="card"
               key={card.id}
-              style={{ backgroundcolor: "white" }}
+              style={{
+                backgroundcolor: "white",
+              }}
             >
+              <div className="card"  style={{ backgroundImage: `url(${card.image})`, backgroundSize: "cover" }} >
               <div className="card-body">
-                <h5 className="card-title">{$Card.name}</h5>
-                <p className="card-text">{$Card.description}</p>
+                <h5>{$Card.name}</h5>
+                <p>{$Card.description}</p>
+                <button onClick={handleClick}>Click to flip</button>
+              </div>
+
+              <div className="card-back">
+                <h5>lol</h5>
+                <p>{$Card.tools}</p>
                 <button onClick={handleClick}>Click to flip</button>
                 <button href={$Card.deployed}></button>
-                <div className="card-back">
-                  <h5>{$Card.name}</h5>
-                  <p>{$Card.description}</p>
-                  <button onClick={handleClick}>Click to flip</button>
-                  <button href={$Card.deployed}></button>
-                </div>
               </div>
+            </div>
             </div>
           ))}
         </div>
+
         <div class="col-sm-3">
           <div className="custom-btn">
             <button class="button">

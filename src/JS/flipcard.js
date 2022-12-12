@@ -16,7 +16,7 @@ var options = {
         console.log("onflipped event"); 
     }
 }
-$(".card-container").flip(options);
+$(".card-container").flip(options); //flip card with options
 //that's it. Very simple and straightforward.
 //You can have two ways to customize the flip effect including direction, speed, timingfunction, autoflip and so on
 //The first way is to specify an options when calling flip(options) function, see details below

@@ -5,7 +5,7 @@
       "id": 1,
       "name": "Foodmersion",
       "image":
-      "./pictures/foodmersion.jpg",
+      "./pictures/foodmersion.png",
       "description": "FullStack website for our imaginary restaurant FoodMersion - an interactive dining experience.",
       "tools":" HTML, JavaScript, Bootstrap, sequalize , Mysql, tailwind css, Insomnia",
       "deployed": "https://evening-spire-50554.herokuapp.com/",

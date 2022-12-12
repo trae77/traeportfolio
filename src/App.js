@@ -20,7 +20,6 @@ import background from "./pictures/background.jpg";
 import card from "./Projects.json";
 import React, { useState } from "react";
 
-
 function App() {
   const [flip, setFlip] = useState(false);
 
@@ -30,7 +29,7 @@ function App() {
       className="App"
     >
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-2">
           <div className="custom-btn">
             <button class="button">
               <img alt="github" src={github} />
@@ -53,7 +52,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-8">
           <h1>Full-stack Software engineer</h1>
           <h3>
             I currently live in Thornton Colorado but am originally from
@@ -71,41 +70,22 @@ function App() {
           {card.map(($Card) => (
             <ReactCardFlip
               isFlipped={flip}
-              flipDirection="vertical"
+              flipDirection="horizontal"
               key={card.id}
             >
-              <div
-                className="card-body"
-                style={{
-                  width: "18rem",
-                  height: "18rem",
-                  backgroundColor: "white",
-                  margin: "10px",
-                  borderRadius: "10px",
-                  border: "1px solid black",
-                }}>
-              
+              <div className="card">
                 <h5>{$Card.name}</h5>
                 <p>{$Card.description}</p>
                 <button onClick={() => setFlip(!flip)}>Flip</button>
               </div>
               <div>
-                <div
-                  className="card-back"
-                  style={{
-                    width: "18rem",
-                    height: "18rem",
-                    backgroundColor: "white",
-                    margin: "10px",
-                    borderRadius: "10px",
-                    border: "1px solid black",
-                    backgroundImage: `url(${$Card.image})`,
-                  }}
-                >
-                  <h5>lol</h5>
+                <div className="card">
+                  <h5>{$Card.name}</h5>
                   <p>{$Card.tools}</p>
                   <button onClick={() => setFlip(!flip)}>Flip</button>
-                  <button> <a href={$Card.deployed}> deployed </a>
+                  <button>
+                    {" "}
+                    <a href={$Card.deployed}> deployed </a>
                   </button>
                 </div>
               </div>
@@ -113,7 +93,7 @@ function App() {
           ))}
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-sm-2">
           <div className="custom-btn">
             <button class="button">
               <img src={react} alt="react" />

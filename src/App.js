@@ -52,7 +52,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-lg-8">
           <h1>Full-stack Software engineer</h1>
           <h3>
             I currently live in Thornton Colorado but am originally from
@@ -68,6 +68,7 @@ function App() {
           </h3>
 
           {card.map(($Card) => (
+            <div className="card-container">
             <ReactCardFlip
               isFlipped={flip}
               flipDirection="horizontal"
@@ -81,16 +82,23 @@ function App() {
               <div>
                 <div className="card">
                   <h5>{$Card.name}</h5>
-                  <p>{$Card.tools}</p>
+                  <p>Tools used : {$Card.tools}</p>
                   <button onClick={() => setFlip(!flip)}>Flip</button>
                   <button>
-                    {" "}
+                    <a href={$Card.repo}> github </a>
+                  </button>
+                  <button>
                     <a href={$Card.deployed}> deployed </a>
                   </button>
                 </div>
               </div>
             </ReactCardFlip>
-          ))}
+          
+            </div>
+            ))
+          
+          }
+      
         </div>
 
         <div class="col-sm-2">

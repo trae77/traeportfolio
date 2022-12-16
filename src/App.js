@@ -61,44 +61,43 @@ function App() {
             and earned a full-Stack Web Development Certificate. Innovative
             problem-solver that is passionate about developing apps focused on
             mobile-first design and development. Strengths in creativity,
-            teamwork, and building projects from ideation to execution. To
-            secure a position that will utilize my skills and experience to
-            maximum potential, with the opportunity for advancement based on
+            teamwork, and building projects from ideation to execution. I would
+            like to secure a position that will utilize my skills and experience
+            to maximum potential, with the opportunity for advancement based on
             performance.
           </h3>
 
           {card.map(($Card) => (
             <div className="card-container">
-            <ReactCardFlip
-              isFlipped={flip}
-              flipDirection="horizontal"
-              key={card.id}
-            >
-              <div className="card">
-                <h5>{$Card.name}</h5>
-                <p>{$Card.description}</p>
-                <button onClick={() => setFlip(!flip)}>Flip</button>
-              </div>
-              <div>
-                <div className="card">
+              <ReactCardFlip
+                isFlipped={flip}
+                flipDirection="horizontal"
+                key={card.id}
+              >
+                <div
+                  className="card"
+                  style={{ backgroundImage: `url((${$Card.image}))` }}
+                >
                   <h5>{$Card.name}</h5>
-                  <p>Tools used : {$Card.tools}</p>
+                  <p>{$Card.description}</p>
                   <button onClick={() => setFlip(!flip)}>Flip</button>
-                  <button>
-                    <a href={$Card.repo}> github </a>
-                  </button>
-                  <button>
-                    <a href={$Card.deployed}> deployed </a>
-                  </button>
                 </div>
-              </div>
-            </ReactCardFlip>
-          
+                <div>
+                  <div className="card">
+                    <h5>{$Card.name}</h5>
+                    <p>Tools used : {$Card.tools}</p>
+                    <button onClick={() => setFlip(!flip)}>Flip</button>
+                    <button>
+                      <a href={$Card.repo}> github </a>
+                    </button>
+                    <button>
+                      <a href={$Card.deployed}> deployed </a>
+                    </button>
+                  </div>
+                </div>
+              </ReactCardFlip>
             </div>
-            ))
-          
-          }
-      
+          ))}
         </div>
 
         <div class="col-sm-2">

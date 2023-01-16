@@ -71,12 +71,12 @@ function App() {
             <div className="card-container">
               <ReactCardFlip
                 isFlipped={flip}
-                flipDirection="horizontal"
+                flipDirection="row"
                 key={card.id}
               >
                 <div
                   className="card"
-                  style={{ backgroundImage: `url((${$Card.image}))` }}
+                  style={{ backgroundImage:`url(${card.image})` , backgroundSize: "cover" } }
                 >
                   <h5>{$Card.name}</h5>
                   <p>{$Card.description}</p>

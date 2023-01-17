@@ -17,10 +17,70 @@ import node from "./pictures/icons/node.png";
 import react from "./pictures/icons/react.png";
 import sass from "./pictures/icons/sass.png";
 import background from "./pictures/background.jpg";
-import card from "./Projects.json";
+
 import React, { useState } from "react";
 
 function App() {
+  const card = [
+    {
+      id: 1,
+      name: "Foodmersion",
+      image: "./pictures/foodmersion.png",
+      description:
+        "FullStack website for our imaginary restaurant FoodMersion - an interactive dining experience.",
+      tools:
+        " HTML, JavaScript, Bootstrap, sequalize , Mysql, tailwind css, Insomnia",
+      deployed: "https://evening-spire-50554.herokuapp.com/",
+      repo: "https://github.com/jacksoncurdo/FoodMersion-",
+    },
+    {
+      id: 2,
+      name: "wheather data",
+      image: "./pictures/Screenshot (21).png",
+      description: "Look up the wheather in different cities using an api",
+      tools: "HTML, CSS, JavaScript, Bootstrap, local storage",
+
+      deployed: "https://trae77.github.io/wheather-data/",
+      repo: "https://github.com/trae77/wheather-data",
+    },
+    {
+      id: 3,
+      name: "Quiz",
+      image: "./pictures/quiz.png",
+      description: "A quiz with timer and high score",
+      tools: " node.js, MySQL",
+      deployed: " https://trae77.github.io/web-api-/",
+      repo: "https://github.com/trae77/web-api-",
+    },
+    {
+      id: 4,
+      name: "Movie Rec",
+      image: "./pictures/Screenshot (17).png",
+      description:
+        "Movie recommendation system based on user's history and movie's genre.",
+      tools: "HTML, CSS, JavaScript, Bootstrap",
+
+      deployed: "https://oborendo.github.io/group-project/",
+      repo: "https://github.com/Oborendo/group-project",
+    },
+    {
+      id: 5,
+      name: "Employee Management",
+      image: "./pictures/Screenshot-201520.png",
+      description:
+        "Command line application keeping track of employees, their departments, managers, salaries, and roles.",
+      tools: "HTML, CSS, JavaScript, Bootstrap",
+      deployed: "https://github.com/trae77/office-",
+    },
+    {
+      id: 6,
+      name: "Blog Post",
+      image: "./pictures/prof pic.jpg",
+      description: "keeps blogs with titles",
+      tools: "HTML, CSS, JavaScript, Bootstrap, sequalize , Mysql, Insomnia",
+      deployed: " https://github.com/trae77/blog-post",
+    },
+  ];
   const [flip, setFlip] = useState(false);
 
   return (
@@ -68,16 +128,11 @@ function App() {
           </h3>
 
           {card.map(($Card) => (
-            <div className="card-container">
-              <ReactCardFlip
-                isFlipped={flip}
-                flipDirection="row"
-                key={card.id}
-              >
+            <div className="card-container" >
+              <ReactCardFlip isFlipped={flip} flipDirection="row" key={card.id} >
                 <div
                   className="card"
-                  style={{ backgroundImage:`url(${card.image})` , backgroundSize: "cover" } }
-                >
+                   >
                   <h5>{$Card.name}</h5>
                   <p>{$Card.description}</p>
                   <button onClick={() => setFlip(!flip)}>Flip</button>

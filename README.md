@@ -5,7 +5,7 @@ Phone: 720-477-8603
 Email: soccerreferee7@gmail.com
 LinkedIn: https://www.linkedin.com/in/william-pollak-7145bb200/
 GitHub: https://github.com/trae77
-Portfolio Site: https://wpportfolio7.herokuapp.com/#/
+Portfolio Site: https://portfoliotrae.herokuapp.com/
 Career Objective
 Web Developer with a full-Stack Web Development Certificate from the University of Denver Coding Bootcamp. Passionate about developing apps with a focus on mobile-first design and development. Strong in creativity, teamwork, and delivering projects from ideation to execution. Seeking a position to fully utilize my skills and experience, with opportunities for growth based on performance.
 

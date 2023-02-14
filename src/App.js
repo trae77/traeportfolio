@@ -21,7 +21,7 @@ import background from "./pictures/background.jpg";
 import React, { useState } from "react";
 
 function App() {
-  const card = [
+  const cardData = [
     {
       id: 1,
       name: "Foodmersion",
@@ -81,7 +81,18 @@ function App() {
       deployed: " https://github.com/trae77/blog-post",
     },
   ];
-  const [flip, setFlip] = useState(false);
+  const [cards, setCard] = useState(cardData);
+
+  const handleFlip = (id) => {
+    setCard((prevCards) => {
+      return prevCards.map((card) => {
+        if (card.id === id) {
+          return { ...card, flip: !card.flip };
+        }
+        return card;
+      });
+    });
+  };
 
   return (
     <div
@@ -112,7 +123,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-7">
           <h1>Full-stack Software engineer</h1>
           <h3>
             I currently live in Thornton Colorado but am originally from
@@ -127,35 +138,38 @@ function App() {
             performance.
           </h3>
 
-          {card.map(($Card) => (
-            <div className="card-container" >
-              <ReactCardFlip isFlipped={flip} flipDirection="row" key={card.id} >
-                <div
-                  className="card"
-                   >
-                  <h5>{$Card.name}</h5>
-                  <p>{$Card.description}</p>
-                  <button onClick={() => setFlip(!flip)}>Flip</button>
-                </div>
-                <div>
-                  <div className="card">
-                    <h5>{$Card.name}</h5>
-                    <p>Tools used : {$Card.tools}</p>
-                    <button onClick={() => setFlip(!flip)}>Flip</button>
+          <div className="card-list">
+            {cardData.map((Card) => (
+              <div className="card-container" key={Card.id}>
+                <ReactCardFlip isFlipped={Card.flip} flipDirection="horizontal">
+                  <div
+                    className="card-front"
+                    onClick={() => handleFlip(Card.id)}
+                  >
+                    <h5>{Card.name}</h5>
+                    <p>{Card.description}</p>
+                    <button onClick={() => handleFlip(Card.id)}>Flip</button>
+                  </div>
+                  <div
+                    className="card-back"
+                    onClick={() => handleFlip(Card.id)}
+                  >
+                    <h5>{Card.name}</h5>
+                    <p>Tools used: {Card.tools}</p>
+                    <button onClick={() => handleFlip(Card.id)}>Flip</button>
                     <button>
-                      <a href={$Card.repo}> github </a>
+                      <a href={Card.repo}>Github</a>
                     </button>
                     <button>
-                      <a href={$Card.deployed}> deployed </a>
+                      <a href={Card.deployed}>Deployed</a>
                     </button>
                   </div>
-                </div>
-              </ReactCardFlip>
-            </div>
-          ))}
+                </ReactCardFlip>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <div className="custom-btn">
             <button class="button">
               <img src={react} alt="react" />

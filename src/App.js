@@ -21,7 +21,7 @@ import background from "./pictures/background.jpg";
 import React, { useState } from "react";
 
 function App() {
-  const cardData = [
+  const [card, setCard] = useState([
     {
       id: 1,
       name: "Foodmersion",
@@ -80,8 +80,7 @@ function App() {
       tools: "HTML, CSS, JavaScript, Bootstrap, sequalize , Mysql, Insomnia",
       deployed: " https://github.com/trae77/blog-post",
     },
-  ];
-  const [cards, setCard] = useState(cardData);
+  ]);
 
   const handleFlip = (id) => {
     setCard((prevCards) => {
@@ -139,12 +138,15 @@ function App() {
           </h3>
 
           <div className="card-list">
-            {cardData.map((Card) => (
+            {card.map((Card) => (
               <div className="card-container" key={Card.id}>
-                <ReactCardFlip isFlipped={Card.flip} flipDirection="horizontal">
+                <ReactCardFlip flipDirection="horizontal">
                   <div
                     className="card-front"
-                    onClick={() => handleFlip(Card.id)}
+                    onClick={() => {
+                      console.log(`Flipping card ${Card.id}`);
+                      handleFlip(Card.id);
+                    }}
                   >
                     <h5>{Card.name}</h5>
                     <p>{Card.description}</p>
@@ -152,7 +154,10 @@ function App() {
                   </div>
                   <div
                     className="card-back"
-                    onClick={() => handleFlip(Card.id)}
+                    onClick={() => {
+                      console.log(`Flipping card ${Card.id}`);
+                      handleFlip(Card.id);
+                    }}
                   >
                     <h5>{Card.name}</h5>
                     <p>Tools used: {Card.tools}</p>

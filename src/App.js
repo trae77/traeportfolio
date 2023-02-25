@@ -49,7 +49,7 @@ function App() {
           </div>
         </div>
         <div class="col-lg-7">
-          <h1>Full-stack Software engineer</h1>
+          <h1>Full-stack Software engineer  UNDER CONSTRUCTION</h1>
           <h3>
             I currently live in Thornton Colorado but am originally from
             Michigan. I enjoy playing sports and video games in my free time.

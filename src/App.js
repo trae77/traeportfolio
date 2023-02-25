@@ -2,8 +2,6 @@ import "bootstrap/dist/css/bootstrap.css";
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import "./App.css";
-import ReactCardFlip from "react-card-flip";
-
 import github from "./pictures/icons/github.png";
 import css from "./pictures/icons/css.png";
 import html from "./pictures/icons/html.png";
@@ -17,86 +15,14 @@ import node from "./pictures/icons/node.png";
 import react from "./pictures/icons/react.png";
 import sass from "./pictures/icons/sass.png";
 import background from "./pictures/background.jpg";
-
-import React, { useState } from "react";
+import React from "react";
+import card from "./Projects.json";
 
 function App() {
-  const [card, setCard] = useState([
-    {
-      id: 1,
-      name: "Foodmersion",
-      image: "./pictures/foodmersion.png",
-      description:
-        "FullStack website for our imaginary restaurant FoodMersion - an interactive dining experience.",
-      tools:
-        " HTML, JavaScript, Bootstrap, sequalize , Mysql, tailwind css, Insomnia",
-      deployed: "https://restarunt.herokuapp.com/",
-      repo: "https://github.com/jacksoncurdo/FoodMersion-",
-    },
-    {
-      id: 2,
-      name: "wheather data",
-      image: "./pictures/Screenshot (21).png",
-      description: "Look up the wheather in different cities using an api",
-      tools: "HTML, CSS, JavaScript, Bootstrap, local storage",
-
-      deployed: "https://trae77.github.io/wheather-data/",
-      repo: "https://github.com/trae77/wheather-data",
-    },
-    {
-      id: 3,
-      name: "Quiz",
-      image: "./pictures/quiz.png",
-      description: "A quiz with timer and high score",
-      tools: " node.js, MySQL",
-      deployed: " https://trae77.github.io/web-api-/",
-      repo: "https://github.com/trae77/web-api-",
-    },
-    {
-      id: 4,
-      name: "Movie Rec",
-      image: "./pictures/Screenshot (17).png",
-      description:
-        "Movie recommendation system based on user's history and movie's genre.",
-      tools: "HTML, CSS, JavaScript, Bootstrap",
-
-      deployed: "https://oborendo.github.io/group-project/",
-      repo: "https://github.com/Oborendo/group-project",
-    },
-    {
-      id: 5,
-      name: "Employee Management",
-      image: "./pictures/Screenshot-201520.png",
-      description:
-        "Command line application keeping track of employees, their departments, managers, salaries, and roles.",
-      tools: "HTML, CSS, JavaScript, Bootstrap",
-      deployed: "https://github.com/trae77/office-",
-    },
-    {
-      id: 6,
-      name: "Blog Post",
-      image: "./pictures/prof pic.jpg",
-      description: "keeps blogs with titles",
-      tools: "HTML, CSS, JavaScript, Bootstrap, sequalize , Mysql, Insomnia",
-      deployed: " https://github.com/trae77/blog-post",
-    },
-  ]);
-
-  const handleFlip = (id) => {
-    setCard((prevCards) => {
-      return prevCards.map((card) => {
-        if (card.id === id) {
-          return { ...card, flip: !card.flip };
-        }
-        return card;
-      });
-    });
-  };
-
   return (
     <div
-      style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
-      className="App"
+       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
+       className="App"
     >
       <div class="row">
         <div class="col-sm-2">
@@ -137,43 +63,48 @@ function App() {
             performance.
           </h3>
 
-          <div className="card-list">
-            {card.map((Card) => (
-              <div className="card-container" key={Card.id}>
-                <ReactCardFlip flipDirection="horizontal">
-                  <div
-                    className="card-front"
-                    onClick={() => {
-                      console.log(`Flipping card ${Card.id}`);
-                      handleFlip(Card.id);
-                    }}
-                  >
-                    <h5>{Card.name}</h5>
-                    <p>{Card.description}</p>
-                    <button onClick={() => handleFlip(Card.id)}>Flip</button>
+            <div class="container">
+            {card.map((card) => (
+              <div class="card card-envo">
+                <div class="flip-box">
+                  <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                    <div id="card" key={card.id}>
+                   <img alt="github" src={card.image} />
+                      </div> 
+                    </div>
+
+                    <div class="flip-box-back project-image">
+                      <h3 class="mt-2">{card.name}</h3>
+                      <h6 class="mt-2 p-2">{card.description}</h6>
+                      <div class="row pt-2">
+                        <div class="col-6">
+                          <h6>
+                            Technologies Used:
+                            {card.tools}
+                          </h6>
+                        </div>
+                      </div>
+                      <button variant="small" className="button">
+                        <a href={card.deployed} target="_blank" rel = "noreferrer">
+                          Deployed
+                        </a>
+                      </button>
+                      <button variant="small" className="button">
+                        <a href={card.repo} target="_blank" rel = "noreferrer">
+                          Repo
+                        </a>
+                      </button>
+                    </div>
                   </div>
-                  <div
-                    className="card-back"
-                    onClick={() => {
-                      console.log(`Flipping card ${Card.id}`);
-                      handleFlip(Card.id);
-                    }}
-                  >
-                    <h5>{Card.name}</h5>
-                    <p>Tools used: {Card.tools}</p>
-                    <button onClick={() => handleFlip(Card.id)}>Flip</button>
-                    <button>
-                      <a href={Card.repo}>Github</a>
-                    </button>
-                    <button>
-                      <a href={Card.deployed}>Deployed</a>
-                    </button>
-                  </div>
-                </ReactCardFlip>
+                </div>
               </div>
             ))}
-          </div>
-        </div>
+          </div> 
+        </div> 
+
+    
+
         <div class="col-sm-3">
           <div className="custom-btn">
             <button class="button">

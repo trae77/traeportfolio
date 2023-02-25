@@ -43,55 +43,11 @@ button {
   color: #61dafb;
   border: 1px solid #282c34;
 }
-img {
+img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.card-container {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
-}
-.card-front,
-.card-back {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  height: 200px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.card-back {
-  display: none;
-}
-
-.card-container .ReactCardFlipCard {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.card-container .ReactCardFlipCard--flipped .card-front {
-  display: none;
-}
-
-.card-container .ReactCardFlipCard--flipped .card-back {
-  display: flex;
-}
-
 .App-link {
   color: #61dafb;
 }

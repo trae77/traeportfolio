@@ -61,7 +61,6 @@ img {
   width: calc(50% - 10px);
   margin-bottom: 20px;
 }
-
 .card-front,
 .card-back {
   display: flex;

@@ -30,7 +30,7 @@ function App() {
         "FullStack website for our imaginary restaurant FoodMersion - an interactive dining experience.",
       tools:
         " HTML, JavaScript, Bootstrap, sequalize , Mysql, tailwind css, Insomnia",
-      deployed: "https://evening-spire-50554.herokuapp.com/",
+      deployed: "https://restarunt.herokuapp.com/",
       repo: "https://github.com/jacksoncurdo/FoodMersion-",
     },
     {

@@ -65,7 +65,7 @@ function App() {
 
             <div class="container">
             {card.map((card) => (
-              <div class="card card-envo">
+              <div class="card-container">
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
@@ -75,8 +75,8 @@ function App() {
                     </div>
 
                     <div class="flip-box-back project-image">
-                      <h3 class="mt-2">{card.name}</h3>
-                      <h6 class="mt-2 p-2">{card.description}</h6>
+                      <h3 >{card.name}</h3>
+                      <h6 >{card.description}</h6>
                       <div class="row pt-2">
                         <div class="col-6">
                           <h6>

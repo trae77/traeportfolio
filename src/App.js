@@ -105,8 +105,11 @@ function App() {
                   </div>
                 </div>
               </div>
+          
             ))}
           </div>
+        </div>
+
           <div class="col-sm-2">
             <div className="custom-btn">
               <button class="button">
@@ -127,8 +130,9 @@ function App() {
             </div>
           </div>
         </div>
+       
       </div>
-    </div>
+
   );
 }
 

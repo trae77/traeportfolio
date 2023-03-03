@@ -15,14 +15,13 @@ p {
 .custom-btn {
   background-color: #61dafb;
   color: #0a54e8;
-  border: 1px solid #61dafb;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px;
+  border: 3px solid #eb0303;
+  padding: 10px 10px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  width: 200px;
+  width: 150px;
+  object-fit: cover;
 }
 button {
   background-color: #61dafb;
@@ -32,15 +31,18 @@ button {
   padding: 10px 20px;
   margin: 10px;
   font-size: 1.2rem;
+  object-fit: cover;
   cursor: pointer;
-  width: 130px;
+  width: 120px;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 .button:hover {
   width: 100px;
   background-color: #282c34;
   color: #61dafb;
   border: 1px solid #282c34;
+  text-align: center;
 }
 img {
   width: 100%;
@@ -103,15 +105,26 @@ img {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  border : 5px solid #61dafb;
 
 }
 .map-container img {
-  width: 300px;
-  height: 300px;
   object-fit: cover;
-  margin: 10px;
 }
 .nav{
 background-color: #acb8bb;
 }
-
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border : 5px solid #0497c0;
+}
+.col-sm-7{
+  border : 5px solid #f90911;
+}
+.col-sm-2{
+  border : 5px solid #0deb05;
+}

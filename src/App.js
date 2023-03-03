@@ -49,7 +49,7 @@ function App() {
               <img src={jquery} alt="jquery" />
             </button>
           </div>
-   </div>
+        </div>
         <div className="col-sm-7">
           {" "}
           <h1>Full-stack Software engineer UNDER CONSTRUCTION</h1>
@@ -67,12 +67,12 @@ function App() {
           </h5>
           <div class="map-container">
             {card.map((card) => (
-              <div class="card-container">
+              <div class="card-container"  >
                 <div class="flip-box">
                   <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                    <div class="flip-box-front" img alt="github" src={card.image}>
                       <div id="card" key={card.id}>
-                        <img alt="github" src={card.image} />
+  
                       </div>
                     </div>
 
@@ -105,34 +105,31 @@ function App() {
                   </div>
                 </div>
               </div>
-          
             ))}
           </div>
         </div>
 
-          <div class="col-sm-2">
-            <div className="custom-btn">
-              <button class="button">
-                <img src={react} alt="react" />
-              </button>
-              <button class="button">
-                <img src={sass} alt="sass" />
-              </button>
-              <button class="button">
-                <img src={mongodb} alt="mongodb" />
-              </button>
-              <button class="button">
-                <img src={mysql} alt="mysql" />
-              </button>
-              <button class="button">
-                <img src={node} alt="node" />
-              </button>
-            </div>
+        <div class="col-sm-2">
+          <div className="custom-btn">
+            <button class="button">
+              <img src={react} alt="react" />
+            </button>
+            <button class="button">
+              <img src={sass} alt="sass" />
+            </button>
+            <button class="button">
+              <img src={mongodb} alt="mongodb" />
+            </button>
+            <button class="button">
+              <img src={mysql} alt="mysql" />
+            </button>
+            <button class="button">
+              <img src={node} alt="node" />
+            </button>
           </div>
         </div>
-       
       </div>
-
+    </div>
   );
 }
 

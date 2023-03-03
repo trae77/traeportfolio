@@ -15,7 +15,6 @@ p {
 .custom-btn {
   background-color: #61dafb;
   color: #0a54e8;
-  border: 3px solid #eb0303;
   padding: 10px 10px;
   font-size: 1.2rem;
   cursor: pointer;
@@ -105,8 +104,6 @@ img {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  border : 5px solid #61dafb;
-
 }
 .map-container img {
   object-fit: cover;
@@ -120,11 +117,8 @@ background-color: #acb8bb;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  border : 5px solid #0497c0;
+  border : 5px solid #107bd3;
 }
-.col-sm-7{
-  border : 5px solid #f90911;
-}
-.col-sm-2{
-  border : 5px solid #0deb05;
+#card{
+  object-fit: cover;
 }

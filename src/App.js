@@ -62,7 +62,7 @@ function App() {
           opportunity for advancement based on performance.
         </h3>
 
-        <div class="container">
+        <div class="card-container">
           <div class="row row-cols-1 row-cols-md-2 mt-3">
             <div class="col mb-4">
               <div class="card card-envo">
@@ -70,9 +70,9 @@ function App() {
                   <div class="flip-box-inner">
                     <div class="flip-box-front">
                       <img
-                        src="assets/images/homepage.JPG"
+                        src="./pictures/icons/css.png"
                         class="card-img-top project-image"
-                        alt="Coding"
+                        alt="img"
                       />
                     </div>
                     <div class="flip-box-back project-image">
@@ -151,53 +151,47 @@ function App() {
                 </div>
               </div>
             </div>
-            </div>
+          </div>
 
-            {/* <div class="container">
-              {card.map((card) => (
-                <div class="card-container">
-                  <div class="flip-box">
-                    <div class="flip-box-inner">
-                      <div class="flip-box-front">
-                        <div id="card" key={card.id}>
-                          <img alt="github" src={card.image} />
-                        </div>
-                      </div>
-
-                      <div class="flip-box-back project-image">
-                        <h3>{card.name}</h3>
-                        <h6>{card.description}</h6>
-                        <div class="row pt-2">
-                          <div class="col-6">
-                            <h6>
-                              Technologies Used:
-                              {card.tools}
-                            </h6>
-                          </div>
-                        </div>
-                        <button variant="small" className="button">
-                          <a
-                            href={card.deployed}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Deployed
-                          </a>
-                        </button>
-                        <button variant="small" className="button">
-                          <a href={card.repo} target="_blank" rel="noreferrer">
-                            Repo
-                          </a>
-                        </button>
-                      </div>
+          {/* <div class="container">
+          {card.map((card) => (
+            <div class="card-container">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <div id="card" key={card.id}>
+                      <img alt="github" src={card.image} />
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
 
-          <div class="col-sm-3">
+                  <div class="flip-box-back project-image">
+                    <h3>{card.name}</h3>
+                    <h6>{card.description}</h6>
+                    <div class="row pt-2">
+                      <div class="col-6">
+                        <h6>
+                          Technologies Used:
+                          {card.tools}
+                        </h6>
+                      </div>
+                    </div>
+                    <button variant="small" className="button">
+                      <a href={card.deployed} target="_blank" rel="noreferrer">
+                        Deployed
+                      </a>
+                    </button>
+                    <button variant="small" className="button">
+                      <a href={card.repo} target="_blank" rel="noreferrer">
+                        Repo
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))} */}
+
+          <div class="col-sm-2">
             <div className="custom-btn">
               <button class="button">
                 <img src={react} alt="react" />

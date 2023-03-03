@@ -1,8 +1,8 @@
 import React from "react";
-
 function Navbar() {
   return (
     <nav>
+      <div className="nav">
       <button className="button">
         <a href="https://www.linkedin.com/in/william-pollak-7145bb200/" target="_blank" rel = "noreferrer" >
           Linkedin
@@ -17,6 +17,7 @@ function Navbar() {
           Resume
         </a>
       </button>
+      </div>
     </nav>
   );
 }

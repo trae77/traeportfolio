@@ -54,12 +54,9 @@ function App() {
           {" "}
           <h1>Full-stack Software engineer UNDER CONSTRUCTION</h1>
           <h5>
-            I currently live in Thornton Colorado but am originally from
-            Michigan. I enjoy playing sports and video games in my free time.
+          I enjoy playing sports and video games in my free time.
             Web Developer trained at the University of Denver Coding Bootcamp
-            and earned a full-Stack Web Development Certificate. Innovative
-            problem-solver that is passionate about developing apps focused on
-            mobile-first design and development. Strengths in creativity,
+            and earned a full-Stack Web Development Certificate. Strengths in creativity,
             teamwork, and building projects from ideation to execution. I would
             like to secure a position that will utilize my skills and experience
             to maximum potential, with the opportunity for advancement based on
@@ -67,15 +64,12 @@ function App() {
           </h5>
           <div class="map-container">
             {card.map((card) => (
-              <div class="card-container"  >
+              <div class="card-container">
                 <div class="flip-box">
                   <div class="flip-box-inner">
-                    <div class="flip-box-front" img alt="github" src={card.image}>
-                      <div id="card" key={card.id}>
-  
-                      </div>
+                    <div class="flip-box-front" id="card" key={card.id}>
+                      <img alt="project" src={card.image} />
                     </div>
-
                     <div class="flip-box-back project-image">
                       <h3>{card.name}</h3>
                       <h6>{card.description}</h6>

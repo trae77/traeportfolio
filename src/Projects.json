@@ -5,7 +5,7 @@
       "id": 1,
       "name": "Foodmersion",
       "image":
-      "./pictures/foodmersion.png",
+      "../src/pictures/Screenshot (20).png",
       "description": "FullStack website for our imaginary restaurant FoodMersion an interactive dining experience.",
       "tools":" HTML, JavaScript, sequalize , Mysql, tailwind css, Insomnia",
       "deployed": "https://restarunt.herokuapp.com/",

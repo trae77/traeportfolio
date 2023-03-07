@@ -15,6 +15,14 @@ import sass from "./pictures/icons/sass.png";
 import background from "./pictures/background.jpg";
 import React from "react";
 import card from "./Projects.json";
+import {
+  Card,
+  Col,
+  Container,
+  Button,
+  ButtonGroup,
+  Row,
+} from "react-bootstrap";
 
 function App() {
   return (
@@ -50,7 +58,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="col-sm-7">
+        <Col sm={7}>
           {" "}
           <h1>Full-stack Software engineer UNDER CONSTRUCTION</h1>
           <h5>
@@ -62,13 +70,17 @@ function App() {
             to maximum potential, with the opportunity for advancement based on
             performance.
           </h5>
-          <div class="map-container">
+        <div class="map-container">
             {card.map((card) => (
               <div class="card-container">
                 <div class="flip-box">
                   <div class="flip-box-inner">
                     <div class="flip-box-front" id="card" key={card.id}>
-                      <img alt="project" src={card.image} />
+                    <Card.Img
+                              class="pic"
+                              alt="pic"
+                              src={card.image}
+                            /> 
                     </div>
                     <div class="flip-box-back project-image">
                       <h3>{card.name}</h3>
@@ -101,8 +113,9 @@ function App() {
               </div>
             ))}
           </div>
-        </div>
+          </Col>
 
+           
         <div class="col-sm-2">
           <div className="custom-btn">
             <button class="button">

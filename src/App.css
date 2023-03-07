@@ -15,12 +15,13 @@ p {
 .custom-btn {
   background-color: #61dafb;
   color: #0a54e8;
-  padding: 10px 10px;
+  padding: 5px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   width: 150px;
   object-fit: cover;
+ 
 }
 button {
   background-color: #61dafb;

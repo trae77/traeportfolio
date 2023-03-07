@@ -4,8 +4,8 @@
     {
       "id": 1,
       "name": "Foodmersion",
-      "image":
-      "../src/pictures/Screenshot (20).png",
+      "image":"./pictures/foodmersion.jpg"
+      ,
       "description": "FullStack website for our imaginary restaurant FoodMersion an interactive dining experience.",
       "tools":" HTML, JavaScript, sequalize , Mysql, tailwind css, Insomnia",
       "deployed": "https://restarunt.herokuapp.com/",
@@ -47,7 +47,7 @@
     },
     {
       "id": 5,
-      "name": "Employee Management",
+      "name": "Staff Manager",
       "image":
       "./pictures/Screenshot-201520.png" ,
       "description": "Command line application keeping track of employees, their departments, managers, salaries, and roles.",

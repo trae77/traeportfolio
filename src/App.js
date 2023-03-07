@@ -62,25 +62,28 @@ function App() {
           {" "}
           <h1>Full-stack Software engineer UNDER CONSTRUCTION</h1>
           <h5>
-          I enjoy playing sports and video games in my free time.
-            Web Developer trained at the University of Denver Coding Bootcamp
-            and earned a full-Stack Web Development Certificate. Strengths in creativity,
-            teamwork, and building projects from ideation to execution. I would
-            like to secure a position that will utilize my skills and experience
-            to maximum potential, with the opportunity for advancement based on
-            performance.
+            I enjoy playing sports and video games in my free time. Web
+            Developer trained at the University of Denver Coding Bootcamp and
+            earned a full-Stack Web Development Certificate. Strengths in
+            creativity, teamwork, and building projects from ideation to
+            execution. I would like to secure a position that will utilize my
+            skills and experience to maximum potential, with the opportunity for
+            advancement based on performance.
           </h5>
-        <div class="map-container">
+          <div class="map-container">
             {card.map((card) => (
               <div class="card-container">
                 <div class="flip-box">
                   <div class="flip-box-inner">
-                    <div class="flip-box-front" id="card" key={card.id}>
-                    <Card.Img
-                              class="pic"
-                              alt="pic"
-                              src={card.image}
-                            /> 
+                    <div class="flip-box-front">
+                      <Card id="card" key={card.id}>
+                      <h2>{card.name}</h2>
+                        <img
+                          src={card.image}
+                          className="portfolio-image"
+                          alt="project image"
+                        />
+                      </Card>
                     </div>
                     <div class="flip-box-back project-image">
                       <h3>{card.name}</h3>
@@ -113,9 +116,8 @@ function App() {
               </div>
             ))}
           </div>
-          </Col>
+        </Col>
 
-           
         <div class="col-sm-2">
           <div className="custom-btn">
             <button class="button">

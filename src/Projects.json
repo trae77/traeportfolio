@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Foodmersion",
-    "image": "./pictures/foodmersion.jpg",
-    "description": "FullStack website for our imaginary restaurant FoodMersion an interactive dining experience.",
-    "tools": " HTML, JavaScript, sequalize , Mysql, tailwind css, Insomnia",
-    "deployed": "https://restarunt.herokuapp.com/",
-    "repo": "https://github.com/jacksoncurdo/FoodMersion-"
+    "name": "Pokedex",
+    "image": "./pictures/pokedex2.jpg",
+    "description": "FullStack website for learning about pokemon", 
+    "tools": " HTML, JavaScript, react, css",
+    "deployed": "https://pokedextrae.herokuapp.com",
+    "repo": "https://github.com/trae77/pokemon"
   },
   {
     "id": 2,
@@ -56,6 +56,15 @@
   },
   {
     "id": 7,
+    "name": "Foodmersion",
+    "image": "./pictures/foodmersion.jpg",
+    "description": "FullStack website for our imaginary restaurant FoodMersion an interactive dining experience.",
+    "tools": " HTML, JavaScript, sequalize , Mysql, tailwind css, Insomnia",
+    "deployed": "https://drive.google.com/file/d/1PtvgUG9kvXFnMEaekvSjFSfgDrUur8qf/view",
+    "repo": "https://github.com/jacksoncurdo/FoodMersion-"
+  },
+  {
+    "id": 8,
     "name": "Blog Post",
     "image": "./pictures/prof pic.jpg",
     "description": "keeps blogs with titles",

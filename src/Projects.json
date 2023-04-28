@@ -10,6 +10,16 @@
   },
   {
     "id": 2,
+    "name": "Movies",
+    "image": "./pictures/movieapp.png",
+    "description": "React website for searching movies", 
+    "tools": " HTML, JavaScript, react, css",
+    "deployed": "https://movieapptrae.herokuapp.com/",
+    "repo": "https://github.com/trae77/movies"
+  },
+
+  {
+    "id": 3,
     "name": "Solar Calculator",
     "image": "./pictures/solar.jpg",
     "description": "I would like to find out if my if home or business is suitable for solar installation. I need an easy way to calculate whether its worth my time or not.",
@@ -18,7 +28,7 @@
     "repo": "https://github.com/trae77/solar-react"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "wheather data",
     "image": "./pictures/Screenshot (21).png",
     "description": "Look up the wheather in different cities using an api",
@@ -28,7 +38,7 @@
     "repo": "https://github.com/trae77/wheather-data"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Quiz",
     "image": "./pictures/quiz.png",
     "description": "A quiz with timer and high score",
@@ -37,7 +47,7 @@
     "repo": "https://github.com/trae77/web-api-"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Movie Rec",
     "image": "./pictures/Screenshot (17).png",
     "description": "Movie recommendation system based on user's history and movie's genre.",
@@ -47,7 +57,7 @@
     "repo": "https://github.com/Oborendo/group-project"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Staff Manager",
     "image": "./pictures/Screenshot-201520.png",
     "description": "Command line application keeping track of employees, their departments, managers, salaries, and roles.",
@@ -55,7 +65,7 @@
     "deployed": "https://github.com/trae77/office-"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Foodmersion",
     "image": "./pictures/foodmersion.jpg",
     "description": "FullStack website for our imaginary restaurant FoodMersion an interactive dining experience.",
@@ -64,7 +74,7 @@
     "repo": "https://github.com/jacksoncurdo/FoodMersion-"
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Blog Post",
     "image": "./pictures/prof pic.jpg",
     "description": "keeps blogs with titles",

@@ -17,28 +17,8 @@
     "deployed": "https://movieapptrae.herokuapp.com/",
     "repo": "https://github.com/trae77/movies"
   },
-
   {
     "id": 3,
-    "name": "Solar Calculator",
-    "image": "./pictures/solar.jpg",
-    "description": "I would like to find out if my if home or business is suitable for solar installation. I need an easy way to calculate whether its worth my time or not.",
-    "tools": " HTML, JavaScript, sequalize , Mysql, React",
-    "deployed": "https://solarcalc.herokuapp.com",
-    "repo": "https://github.com/trae77/solar-react"
-  },
-  {
-    "id": 4,
-    "name": "wheather data",
-    "image": "./pictures/Screenshot (21).png",
-    "description": "Look up the wheather in different cities using an api",
-    "tools": "HTML, CSS, JavaScript, Bootstrap, local storage",
-
-    "deployed": "https://trae77.github.io/wheather-data/",
-    "repo": "https://github.com/trae77/wheather-data"
-  },
-  {
-    "id": 5,
     "name": "Quiz",
     "image": "./pictures/quiz.png",
     "description": "A quiz with timer and high score",
@@ -47,7 +27,7 @@
     "repo": "https://github.com/trae77/web-api-"
   },
   {
-    "id": 6,
+    "id": 4,
     "name": "Movie Rec",
     "image": "./pictures/Screenshot (17).png",
     "description": "Movie recommendation system based on user's history and movie's genre.",
@@ -57,7 +37,7 @@
     "repo": "https://github.com/Oborendo/group-project"
   },
   {
-    "id": 7,
+    "id": 5,
     "name": "Staff Manager",
     "image": "./pictures/Screenshot-201520.png",
     "description": "Command line application keeping track of employees, their departments, managers, salaries, and roles.",
@@ -65,7 +45,7 @@
     "deployed": "https://github.com/trae77/office-"
   },
   {
-    "id": 8,
+    "id": 6,
     "name": "Foodmersion",
     "image": "./pictures/foodmersion.jpg",
     "description": "FullStack website for our imaginary restaurant FoodMersion an interactive dining experience.",
@@ -74,7 +54,7 @@
     "repo": "https://github.com/jacksoncurdo/FoodMersion-"
   },
   {
-    "id": 9,
+    "id": 7,
     "name": "Blog Post",
     "image": "./pictures/prof pic.jpg",
     "description": "keeps blogs with titles",
